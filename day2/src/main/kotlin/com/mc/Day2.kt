@@ -1,6 +1,5 @@
 package com.mc
 
-class SpreadsheetChecksumCalculator {
 
     fun calculateChecksum(spreadsheet: List<List<Int>>): Int {
         return spreadsheet
@@ -20,4 +19,3 @@ class SpreadsheetChecksumCalculator {
         fun calculateDifference() = maxValue - minValue
     }
 
-}

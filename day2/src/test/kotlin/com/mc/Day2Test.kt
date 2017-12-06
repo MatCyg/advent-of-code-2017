@@ -4,12 +4,7 @@ import org.junit.Before
 import org.junit.Test
 import kotlin.test.assertEquals
 
-class SpreadsheetChecksumCalculatorTest {
-    lateinit var spreadsheetChecksumCalculator: SpreadsheetChecksumCalculator
-    @Before
-    fun setUp() {
-        spreadsheetChecksumCalculator = SpreadsheetChecksumCalculator()
-    }
+class Day2Test {
 
     @Test
     fun test1() {
@@ -19,7 +14,7 @@ class SpreadsheetChecksumCalculatorTest {
                 listOf(2, 4, 6, 8)
         )
         val expectedChecksum = 18
-        val calculatedChecksum = spreadsheetChecksumCalculator.calculateChecksum(spreadsheet)
+        val calculatedChecksum = calculateChecksum(spreadsheet)
         assertEquals(expectedChecksum, calculatedChecksum)
     }
 
@@ -43,7 +38,7 @@ class SpreadsheetChecksumCalculatorTest {
                 listOf(1112, 1260, 809, 72, 1104, 156, 104, 1253, 793, 462, 608, 84, 99, 1174, 449, 929),
                 listOf(707, 668, 1778, 1687, 2073, 1892, 62, 1139, 908, 78, 1885, 800, 945, 712, 57, 65)
         )
-        val calculatedChecksum = spreadsheetChecksumCalculator.calculateChecksum(spreadsheet)
+        val calculatedChecksum = calculateChecksum(spreadsheet)
         println(calculatedChecksum)
     }
 }

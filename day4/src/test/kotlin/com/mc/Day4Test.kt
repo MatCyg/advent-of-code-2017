@@ -3,7 +3,7 @@ package com.mc
 import org.junit.Assert.*
 import org.junit.Test
 
-class EntropyPassphraseKtTest {
+class Day4Test {
 
     private fun doTest(passphrase: String, isValid: Boolean) {
         val actual = isPassphraseValid(passphrase)
