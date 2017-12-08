@@ -2,12 +2,12 @@ internal enum class ComparisonOperation(
         val shortName: String,
         val function: (Int, Int) -> Boolean
 ) {
-    LESS_THEN("<", { a: Int, b: Int -> a < b }),
-    LESS_THEN_OR_EQUAL("<=", { a: Int, b: Int -> a <= b }),
-    GREATER_THEN(">", { a: Int, b: Int -> a > b }),
+    LESS_THEN            ("<",  { a: Int, b: Int -> a < b }),
+    GREATER_THEN         (">",  { a: Int, b: Int -> a > b }),
+    LESS_THEN_OR_EQUAL   ("<=", { a: Int, b: Int -> a <= b }),
     GREATER_THEN_OR_EQUAL(">=", { a: Int, b: Int -> a >= b }),
-    EQUALITY("==", { a: Int, b: Int -> a == b }),
-    INEQUALITY("!=", { a: Int, b: Int -> a != b });
+    EQUALITY             ("==", { a: Int, b: Int -> a == b }),
+    INEQUALITY           ("!=", { a: Int, b: Int -> a != b });
 
     companion object {
         fun fromShortName(shortName: String): ComparisonOperation {
