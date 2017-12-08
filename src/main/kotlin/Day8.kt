@@ -55,8 +55,8 @@ fun executeCommands(operations: List<String>): Int {
                     Instruction(it[0], ArithmeticOperation.fromShortName(it[1]), it[2].toInt(),
                                 it[4], ComparisonOperation.fromShortName(it[5]), it[6].toInt()) }}
             .forEach { instruction ->
-                val conditionReigstry = registry[instruction.conditionRegistry] ?: 0
-                if (instruction.checkCondition(conditionReigstry)) {
+                val conditionRegistry = registry[instruction.conditionRegistry] ?: 0
+                if (instruction.checkCondition(conditionRegistry)) {
                     val operationRegistryValue = registry[instruction.operationRegistry] ?: 0
                     registry[instruction.operationRegistry] = instruction.executeCommand(operationRegistryValue)
                 }
